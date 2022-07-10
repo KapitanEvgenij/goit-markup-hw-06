@@ -247,12 +247,14 @@ bottom: 0;
     border-radius: 4px;
     margin: 0 auto;
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-    background: #188CE8;;  
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
  
 /*--------- Features STYLES --------- */
@@ -579,7 +581,9 @@ justify-content: center;
 .footer-address-wrap {
     margin-right: 70px;
 }
-
+.footer-soc {
+    margin-right: 90px;
+}
 .footer-soc-title {
     font-weight: 700;
         font-size: 14px;
@@ -630,6 +634,45 @@ justify-content: center;
     
 }
 
+
+.subscribe-form {
+    display: flex;
+   
+}
+.subscribe-input {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        outline: transparent;
+        padding: 15px;
+        margin-right: 12px;
+        color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color:#FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.footer-subscribe-icon {
+    fill: currentColor;
+    margin-left: 10px;
+}
+
+.subscribe-input::placeholder {
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: rgba(255, 255, 255, 0.6);
+}
 /*-----------MODAL------------------*/
 
 .backdrop {
@@ -682,13 +725,46 @@ justify-content: center;
        margin-bottom: 4px;
 }
 
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.modal-field:last-child {
+    margin-bottom: 30px;
+}
+
+
+
+.input-wrap {
+    position: relative;
+}
 .modal-input {
         width: 100%;
         height: 40px;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         background-color: transparent;
-        margin-bottom: 10px;
+        padding-left: 35px;
+        outline: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+    border-color: var(--accent-color);
+    
+}
+.modal-input:focus + .input-icon {
+    fill: var(--accent-color);
+    
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-text {
@@ -699,6 +775,12 @@ justify-content: center;
         border-radius: 4px;
         padding: 12px 16px;
         resize: none;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        outline: transparent;
+}
+
+.modal-text:focus {
+    border-color: var(--accent-color);
 }
 
 .modal-text::placeholder {
@@ -710,13 +792,44 @@ justify-content: center;
         color: rgba(117, 117, 117, 0.5);
 }
 
+.input-check:checked + .check-text::before {
+    background-color: var(--accent-color);
+    background-image: url(../images/che.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.check-text{
+    font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        display: flex;
+        align-items: center;
+        color: #757575;
+}
+.check-text::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    margin-right: 5px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+}
+
+.check-text a {
+    color: var(--accent-color);
+}
+
 .modal-close-btn {
     position: absolute;
     top:10px;
     right:10px;
     width: 30px;
     height: 30px;
-    border-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
     border-radius: 50%;
     display: flex;
@@ -724,7 +837,24 @@ justify-content: center;
     justify-content: center;
     outline: transparent;
     padding: 0;
+    
 }
+
+.close-btn {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+
+.close-btn:hover,
+.close-btn:focus {
+    fill: var(--accent-color);
+}
+
+.modal-btn {
+    margin-top: 30px;
+}
+
 
 .is-hidden {
     opacity: 0;
@@ -735,6 +865,8 @@ justify-content: center;
 .no-scroll {
     overflow: hidden;
 }
+
+
 
 /*----------------PORTFOLIO STYLES--------------*/
 /*------- Portfolio navigation ----------------*/
