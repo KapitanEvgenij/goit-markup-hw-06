@@ -182,7 +182,7 @@ bottom: 0;
 /*--------- HERO STYLES --------- */
 .hero {
     background-color: var(--main-bg-color);
-    width: 1600px;
+    max-width: 1600px;
         
         height: 600px;
         margin: 0 auto;
@@ -582,7 +582,7 @@ justify-content: center;
     margin-right: 70px;
 }
 .footer-soc {
-    margin-right: 90px;
+    margin-right: auto;
 }
 .footer-soc-title {
     font-weight: 700;
@@ -673,6 +673,11 @@ font-size: 16px;
 line-height: 1.25;
 color: rgba(255, 255, 255, 0.6);
 }
+
+.subscribe-input:focus {
+    border-color:var(--accent-color)
+    
+}
 /*-----------MODAL------------------*/
 
 .backdrop {
@@ -712,7 +717,7 @@ color: rgba(255, 255, 255, 0.6);
         text-align: center;
         letter-spacing: 0.03em;
         margin-bottom: 12px;
-        color: #212121;
+        color: var(--second-title-color:);
 }
 
 .input-label {
@@ -720,7 +725,7 @@ color: rgba(255, 255, 255, 0.6);
         font-size: 12px;
         line-height: 1.16;
         letter-spacing: 0.01em;
-       color: #757575;
+       color: var(--main-text-color);
        display: block;
        margin-bottom: 4px;
 }
@@ -729,10 +734,15 @@ color: rgba(255, 255, 255, 0.6);
     margin-bottom: 10px;
 }
 
-.modal-field:last-child {
-    margin-bottom: 30px;
+
+
+.modal-field.margin-btm-20 {
+    margin-bottom: 20px;
 }
 
+.modal-field.margin-btm-30 {
+    margin-bottom: 30px;
+}
 
 
 .input-wrap {
@@ -801,6 +811,9 @@ color: rgba(255, 255, 255, 0.6);
     border-radius: 2px;
 }
 
+.input-check:focus + .check-text::before {
+    border-color: var(--accent-color);
+}
 .check-text{
     font-weight: 400;
         font-size: 14px;
@@ -808,7 +821,8 @@ color: rgba(255, 255, 255, 0.6);
         letter-spacing: 0.03em;
         display: flex;
         align-items: center;
-        color: #757575;
+        justify-content: center;
+        color: var(--main-text-color);
 }
 .check-text::before {
     content: '';
@@ -821,6 +835,7 @@ color: rgba(255, 255, 255, 0.6);
 
 .check-text a {
     color: var(--accent-color);
+    margin-left: 5px;
 }
 
 .modal-close-btn {
@@ -850,11 +865,6 @@ color: rgba(255, 255, 255, 0.6);
 .close-btn:focus {
     fill: var(--accent-color);
 }
-
-.modal-btn {
-    margin-top: 30px;
-}
-
 
 .is-hidden {
     opacity: 0;
