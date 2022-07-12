@@ -5,6 +5,7 @@
     --header-contacts-color:#757575;
     --main-title-color: #ffffff;
     --second-title-color: #212121;
+    --border-check-color: #212121;
     --main-text-color: #757575;
     --accent-color: #2196F3;
     --main-btn-color: #2196F3;
@@ -829,7 +830,7 @@ color: rgba(255, 255, 255, 0.6);
     width: 16px;
     height: 15px;
     margin-right: 5px;
-    border: 1px solid #212121;
+    border: 1px solid var(--border-check-color);
     border-radius: 2px;
 }
 
